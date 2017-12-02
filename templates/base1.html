@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}-Shandong University of Technology</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/warning.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+    {% block head %}{% endblock %}
+</head>
+
+<body >
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" >
+              <img class="logo" src="{{ url_for('static',filename='images/sdutlogo.jpg') }}">
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ><a href="{{ url_for('root') }}">提交展示 <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('regist') }}">学生注册</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                  <li><a >{{ user.stuID }}</a> </li>
+                  <li><a >{{ user.username }}</a></li>
+                  <li><a href="{{ url_for('logout') }}">注销</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    {% block main %}
+    {% endblock %}
+</body>
+</html>
+

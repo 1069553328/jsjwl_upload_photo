@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block title %}
+    提交说明
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+{% endblock %}
+{% block main%}
+    <div class="background-index">
+        <h2>说明</h2>
+        <ul class="list-group list-group-x">
+            <li class="list-group-item">学生用户登录请点击右上方登录</li>
+            <li class="list-group-item">管理员登录请点击右上方管理员</li>
+            <li class="list-group-item">提交文件点击左上方提交文件，上传文件请提交压缩包，<font color="red"><b>仅允许.zip/.rar格式上传</b></font></li>
+            <li class="list-group-item">压缩包<font color="red"><b>命名规范</b></font>：队伍名称-姓名-学号</li>
+            <li class="list-group-item">压缩包内图片<font color="red"><b>命名规范</b></font>：（例如-><b>题目1.jpg</b>）</li>
+            <li class="list-group-item">个人技术不足，网站初建，功能简陋，请大佬们手下留情</li>
+            <li class="list-group-item">如有问题与建议请联系QQ：1069553328</li>
+            <li class="list-group-item">欢迎大家，谢谢~~~</li>
+        </ul>
+    </div>
+{% endblock %}

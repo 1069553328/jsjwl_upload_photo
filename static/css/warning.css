@@ -1,0 +1,11 @@
+.xxx{
+    text-align: center;
+    font-weight:900;
+    margin: 0px;
+}
+.box-pagination{
+    text-align: center;
+    width: 1300px;
+    position: absolute;
+    bottom: 0px;
+}

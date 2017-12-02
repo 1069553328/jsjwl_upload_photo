@@ -1,0 +1,20 @@
+/*.background-index{*/
+    /*width:1100px;*/
+    /*height:640px;*/
+    /*margin:0 auto;*/
+    /*overflow:hidden;*/
+    /*background-image: url("../images/index.JPG");*/
+
+    /*background-size:100% 100%;*/
+    /*background-repeat: no-repeat;*/
+/*}*/
+.background-index{
+    background: #fff;
+    width:730px;
+    margin:0 auto;
+    overflow:hidden;
+    text-align: center;
+}
+.list-group-x{
+    padding: 30px;
+}

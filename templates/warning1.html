@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+{% block title %}
+    重复注册提示
+{% endblock %}
+{% block head %}
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/warning.css') }}">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+            <div class="alert alert-danger xxx" role="alert">该学号已经注册，请重新注册</div>
+    </div>
+{% endblock %}
+
+

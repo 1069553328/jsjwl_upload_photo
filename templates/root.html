@@ -1,0 +1,47 @@
+{% extends 'base1.html' %}
+{% block title %}
+    管理员
+{% endblock %}
+{% block head %}
+{% endblock %}
+
+{% block main %}
+    <div class="mainn">
+        <table class="table table-bordered ">
+            <thead>
+            <tr>
+                <th style="50%">队伍名称</th>
+                <th>姓名</th>
+                <th>专业班级</th>
+                <th>学号</th>
+                <th>文件路径</th>
+                <th>提交时间</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for files in submit_files.items %}
+                    <tr>
+                        <td>{{ files.user.teamname }}</td>
+                        <td>{{ files.user.username }}</td>
+                        <td>{{ files.user.proclass }}</td>
+                        <td>{{ files.user.stuID }}</td>
+                        <td>{{ files.filepath }}</td>
+                        <td>{{ files.create_time }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{#                    <p>{{files.user.teamname}},{{ files.user.username }},{{ files.user.proclass }}#}
+{#                    ,{{ files.user.stuID }},{{ files.filepath }},{{ files.create_time }}</p>#}
+        {% import "_roots.html" as macros %}
+        <div class="box-pagination ppagination">
+            <div class="pagination">
+                {{ macros.pagination_widget(submit_files,'.root') }}
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}
+

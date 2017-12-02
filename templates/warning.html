@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block tilte%}
+    密码错误提示
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/warning.css') }}">
+{% endblock %}
+{% block main %}
+    <div class="main">
+    <div class="alert alert-danger xxx" role="alert">账号或密码错误，请核对后登陆</div>
+    </div>
+{% endblock %}
